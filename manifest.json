@@ -9,20 +9,14 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
   "permissions": [
+    "tabs",
     "clipboardRead",
     "contextMenus",
+    "http://*/*",
     "https://*/*"
   ],
   "background": {
-    "scripts": ["src/menu.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://*/*","http://*/*"],
-      "css": ["src/inject/inject.css"],
-      "js": ["src/inject/inject.js"]
-    }
-  ]
+    "scripts": ["src/background.js", "src/jquery.min.js"]
+  }
 }
