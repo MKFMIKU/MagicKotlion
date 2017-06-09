@@ -1,0 +1,28 @@
+{
+  "name": "MagicKotlion",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Convert java code you select to kotlion",
+  "homepage_url": "https://github.com/MKFMIKU/MagicKotlion",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "clipboardRead",
+    "contextMenus",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["src/menu.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"],
+      "css": ["src/inject/inject.css"],
+      "js": ["src/inject/inject.js"]
+    }
+  ]
+}
