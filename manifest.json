@@ -18,5 +18,16 @@
   ],
   "background": {
     "scripts": ["src/background.js", "src/jquery.min.js"]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
 }
